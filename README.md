@@ -44,7 +44,7 @@ Finally, you can get your compiled file out of your container. The image include
 To send the apk in a mail, use sendemail to send the compiled APK as an attachment to yourself (using GMail):
 
 ```
-    - sendemail -f $GMAIL_USER@gmail.com -t $MAIL_RCPT -s smtp.gmail.com:587 -xu $GMAIL_USER -xp $GMAIL_PASS -u "New CI build $CI_BUILD_ID" -m "Hi, \r\nthis is your Gitlab CI building $CI_BUILD_REPO, branch/tag $CI_BUILD_REF_NAME. \r\nThe generated APK file is attached. \r\nRegards, \r\n$CI_SERVER_NAME" -a platforms/android/build/outputs/apk/android-debug.apk
+    - sendemail -f $GMAIL_USER@gmail.com -t $MAIL_RCPT -s smtp.gmail.com:587 -xu $GMAIL_USER -xp $GMAIL_PASS -u "New CI build $CI_BUILD_ID" -m "Hi, \nthis is your Gitlab CI building $CI_BUILD_REPO, branch/tag $CI_BUILD_REF_NAME, commit $CI_BUILD_REF. \nThe generated APK file is attached. \nRegards, \n$CI_SERVER_NAME" -a platforms/android/build/outputs/apk/android-debug.apk
 ```
 
 Note that `GMAIL_USER`, `GMAIL_PASS` and `MAIL_RCPT` are environment variables that have to be configured in the project settings -> Variables and the `CI_*` variables are set by the CI system and for Gitlab CI are documented [here](http://doc.gitlab.com/ce/ci/variables/README.html). The documentation for `sendemail` is [here](https://github.com/mogaal/sendemail).
