@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y git lib32stdc++6 lib32z1 npm nodejs nod
 # Install android SDK, tools and platforms 
 RUN cd /opt && curl https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz -o android-sdk.tgz && tar xzf android-sdk.tgz && rm android-sdk.tgz
 ENV ANDROID_HOME /opt/android-sdk-linux
-RUN echo 'y' | /opt/android-sdk-linux/tools/android update sdk -u -a -t platform-tools,build-tools-23.0.3,android-23
+RUN echo 'y' | /opt/android-sdk-linux/tools/android update sdk -u -a -t platform-tools,build-tools-23.0.3,android-23,extra-android-support
 
 # Install npm packages
 RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
