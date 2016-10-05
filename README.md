@@ -6,27 +6,27 @@ It is primarily meant to be run in a CI environment, such as Gitlab CI, but can 
 
 ## CI Configuration
 
-Here is a sample .gitlab-ci.yml file for setting up the project and compiling it:
+Here is a sample bitbucket.pipelines.yml file for setting up the project and compiling it:
 
 ```yaml
-image: tobitheo/ionic-build-android-ci-docker:latest
+image: niklasmerz/ionic-build-android-ci-docker:latest
 
-compile_android:
-  stage: build
-  script:
-    - cp debug.keystore ~/.android/debug.keystore
-    - npm install
-    - bower install --allow-root
-    - ionic config build
-    - ionic state restore
-    - ionic build android
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - npm install
+          - bower install --allow-root
+          - ionic config build
+          - ionic platform add android
+          - ionic build android
 ```
 
 It is important to manage your keystores correctly. For signing debug releases, the android build tools will automatically fall back to `~/.android/debug.keystore`, which should not be password protected.
 
 ## .gitignore
 
-This example assumes, that your `.gitignore` looks approximately like this: 
+This example assumes, that your `.gitignore` looks approximately like this:
 
 ```
 node_modules/
