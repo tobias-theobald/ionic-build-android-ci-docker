@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Tobias Theobald <tobias@health-cast.com>
+MAINTAINER Niklas Merz
 
 # Install apt packages
 RUN apt-get update && apt-get install -y git lib32stdc++6 lib32z1 npm nodejs nodejs-legacy s3cmd build-essential curl openjdk-8-jdk-headless sendemail libio-socket-ssl-perl libnet-ssleay-perl && apt-get clean && rm -rf /var/lib/apt/lists/*
