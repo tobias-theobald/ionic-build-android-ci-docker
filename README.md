@@ -2,7 +2,7 @@
 
 This image provides all tools required to automatically build and Android app out of your ionic (and possibly also cordova) project.
 
-It is primarily meant to be run in a CI environment, such as Gitlab CI, but can certainly also be used to run the compilation process on any machine capable of running docker without having to go through the process of setting everything up.
+It is primarily meant to be run in a CI environment, such as Bitbucket CI, but can certainly also be used to run the compilation process on any machine capable of running docker without having to go through the process of setting everything up.
 
 ## CI Configuration
 
