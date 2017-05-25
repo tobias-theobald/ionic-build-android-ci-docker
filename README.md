@@ -4,6 +4,10 @@ This image provides all tools required to automatically build and Android app ou
 
 It is primarily meant to be run in a CI environment, such as Bitbucket CI, but can certainly also be used to run the compilation process on any machine capable of running docker without having to go through the process of setting everything up.
 
+## Updates
+
+25.05.2017: New Build with newest Ionic + Cordova CLI and Android build tools.
+
 ## CI Configuration
 
 Here is a sample bitbucket.pipelines.yml file for setting up the project and compiling it:
