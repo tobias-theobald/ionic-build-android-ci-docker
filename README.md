@@ -1,5 +1,7 @@
 # ionic-build-android-ci-docker
 
+## Attention! This project is no longer maintained. Feel free to fork it and make necessary modifications for your project.
+
 This image provides all tools required to automatically build and Android app out of your ionic (and possibly also cordova) project.
 
 It is primarily meant to be run in a CI environment, such as Gitlab CI, but can certainly also be used to run the compilation process on any machine capable of running docker without having to go through the process of setting everything up.
